@@ -1,3 +1,81 @@
+webui-tabs[data-nojs] {
+  --tab-font-height: 16px;
+  --vert-scroll-margin: 3lh;
+  --highlight-color: var(--very-light-grey);
+  --tab-text-color: rgba(18, 44, 79, 1);
+  --active-section-indicator-color: rgba(21, 161, 162, 1);
+  --default-background-color: white;
+
+  /* styles no javascript */
+  display: block;
+  border: 1px solid var(--highlight-color);
+  border-radius: 4px;
+  padding: 4px;
+  background-color: var(--highlight-color);
+
+  [data-tablist] {
+    position: sticky;
+    top: 0;
+    display: flex;
+    gap: 5px;
+    background-color: var(--highlight-color);
+    z-index: 1;
+  }
+  [data-tab] {
+    padding: 4px 6px;
+    color: var(--tab-text-color);
+    background-color: var(--default-background-color);
+    border: 1px solid hsl(219deg 1% 72%);
+    border-radius: 5px 5px 0 0;
+    font-size: var(--tab-font-height);
+    text-decoration: none;
+  }
+
+  [data-tab]:hover {
+    border: 1px solid rgb(36 116 214);
+    border-radius: 3px;
+    text-decoration: underline;
+  }
+
+  [data-tabpanel] {
+    background-color: var(--default-background-color);
+    margin-top: var(--tab-font-height);
+    scroll-margin-top: var(--vert-scroll-margin);
+    border: 1px solid hsl(219deg 1% 72%);
+    border-radius: 0 5px 5px;
+    padding: 8px;
+  }
+
+  @media screen and (min-width: 420px) {
+    [data-tabpanel] {
+      --vert-scroll-margin: 2lh;
+    }
+  }
+
+  [data-tabpanel] > p {
+    margin: 0;
+  }
+
+  [data-tabpanel]:target {
+    position: relative;
+    padding-left: 8px;
+  }
+
+  [data-tabpanel]:target::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-left: 4px solid var(--active-section-indicator-color);
+  }
+}
+
+:root {
+  --very-light-grey: rgba(227, 232, 236, 1);
+  --off-white: rgba(243, 244, 246, 1);
+}
+
 *,
 *::before,
 *::after {
@@ -7,4 +85,5 @@
 body {
   font-family: "Lato", ".SFNSText", "SFProText-Regular", "SFUIText-Regular",
     ".SFUIText", Helvetica, Arial, sans-serif;
+  background-color: var(--off-white);
 }
