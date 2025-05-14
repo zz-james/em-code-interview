@@ -110,6 +110,7 @@ webui-tabs {
 
   [role="tablist"] {
     position: static;
+    display: flex;
   }
 
   [role="tabpanel"] {
