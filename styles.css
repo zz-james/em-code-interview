@@ -93,11 +93,15 @@ webui-tabs {
   /* better solutions to this ? */
   [aria-selected="true"] + [data-tab]:last-child,
   [data-tab] + [aria-selected="true"]:last-child {
-    padding-left: 36px;
+    border-left: 1px solid var(--very-light-grey);
   }
 
   [data-tab]:has(+ [aria-selected="true"]:last-child) {
-    padding-left: 34px; /*prevent text shift due to border change*/
+    padding-left: 34px; /*prevent text shift due to border changes*/
+  }
+
+  [data-tab]:focus-visible {
+    z-index: 2;
   }
 
   /* style roles added by javascript */
