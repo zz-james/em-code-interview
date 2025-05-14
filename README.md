@@ -1,6 +1,16 @@
 # em-code-interview
-code to discuss duriing the interview
+Code to discuss duriing the interview. I took the tab task from the invite document and combined it with some of my own existing code, so the tabs are styled according to the supplied jpeg (see below) but with different focus / content.
 
+# to launch
+launch a python server
+```
+python3 -m http.server 8000
+```
+then visit 
+[http://localhost:8000](http://localhost:8000/)
+
+alternatively see any of these methods:
+[https://medium.com/sweetmeat/simple-one-line-local-http-servers-8adb57d93ec3](https://medium.com/sweetmeat/simple-one-line-local-http-servers-8adb57d93ec3)
 
 # possible talking points:
 - are tabs bad UI for websites?
