@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Tabs With Web Components</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <article>
+      <h2 id="tabs-title">Some facts about BBC Radio</h2>
+      <p>
+        BBC Radio is an operational business division and service of the British
+        Broadcasting Corporation (BBC) which has operated in the United Kingdom
+        under the terms of a royal charter since 1927. The service provides
+        national radio stations covering the majority of musical genres, as well
+        as local radio stations covering local news, affairs, and interests. It
+        also oversees online audio content.
+      </p>
+
+      <webui-tabs data-nojs>
+        <div data-tablist aria-labelledby="tabs-title">
+          <a href="#tab1" data-tab>BBC Radio 1</a>
+          <a href="#tab2" data-tab>BBC Radio 2</a>
+          <a href="#tab3" data-tab>BBC Radio 3</a>
+        </div>
+        <div id="tab1" data-tabpanel>
+          <p>
+            BBC Radio 1 is a British national radio station owned and operated
+            by the BBC. It specialises in modern popular music and current chart
+            hits throughout the day. The station provides alternative genres at
+            night, including electronica, dance, hip hop and indie, while its
+            sister station 1Xtra plays Black contemporary music, including hip
+            hop and R&B. Radio 1 also runs two online streams, Radio 1 Dance,
+            dedicated to dance music, and Radio 1 Anthems, dedicated to
+            throwback music; both are available to listen only on BBC Sounds.
+          </p>
+        </div>
+
+        <div id="tab2" data-tabpanel>
+          <p>
+            BBC Radio 2 is a British national radio station owned and operated
+            by the BBC. It is the most popular station in the United Kingdom
+            with over 14 million weekly listeners. Since launching in 1967, the
+            station broadcasts a wide range of content. The 'About Radio 2' BBC
+            webpage says: "With a repertoire covering more than 60 years, Radio
+            2 plays the widest selection of music on the radio - from classic
+            and mainstream pop to country, folk, jazz, musical theatre, soul,
+            hip hop, rock 'n' roll, gospel and blues."
+          </p>
+        </div>
+
+        <div id="tab3" data-tabpanel>
+          <p>
+            BBC Radio 3 is a British national radio station owned and operated
+            by the BBC. It replaced the BBC Third Programme in 1967 and
+            broadcasts classical music and opera, with jazz, world music,
+            culture and the arts also featuring. The station has described
+            itself as "the world's most significant commissioner of new music".
+          </p>
+        </div>
+      </webui-tabs>
+
+      <p>
+        Of the national radio stations,
+        <a href="http://bbc.co.uk">BBC Radio</a> 1, 2, 3, 4, and 5 Live are all
+        available through analogue radio (MW or FM, also BBC Radio 4 broadcasts
+        on longwave[3]) as well as on DAB Digital Radio and BBC Sounds. The
+        Asian Network broadcasts on DAB and selected AM frequencies in the
+        English Midlands. BBC Radio 1Xtra, 4 Extra, 5 Sports Extra, 6 Music and
+        the World Service broadcast only on DAB and BBC Sounds, while Radio 1's
+        Dance and Anthems streams and Radio 3's Unwind stream are available only
+        online.
+      </p>
+      <p>
+        The BBC's radio services began in 1922. The British Government licensed
+        the BBC through its General Post Office, which had original control of
+        the airwaves because they had been interpreted under law as an extension
+        of the Post Office services. Today radio broadcasting still makes up a
+        large part of the corporation's output.
+      </p>
+      <p>
+        John Reith, who had been the founding managing director of the
+        commercial company, became the first Director-General. He expounded firm
+        principles of centralised, all-encompassing radio broadcasting,
+        stressing programming standards and moral tone. These he set out in his
+        1924 autobiography, Broadcast Over Britain, influencing modern ideas of
+        public service broadcasting in the United Kingdom. To this day, the BBC
+        aims to follow the Reithian directive to "inform, educate and
+        entertain".
+      </p>
+
+      <p>
+        Although no other broadcasting organisation was licensed in the UK until
+        1973, commercial competition soon opened up from overseas. The English
+        language service of Radio Luxembourg began in 1933 as one of the
+        earliest commercial radio stations broadcasting to Britain and Ireland.
+        With no possibility of domestic commercial broadcasting in the UK, a
+        former British Royal Air Force captain and entrepreneur (and from 1935
+        Conservative Party MP) named Leonard Plugge set up his own International
+        Broadcasting Company in 1931. The IBC began leasing time on transmitters
+        in continental Europe and then reselling it as sponsored
+        English-language programming aimed at audiences in Britain and Ireland.
+        Because Plugge successfully demonstrated that state monopolies such as
+        that of the BBC could be broken, other parties became attracted to the
+        idea of creating a new commercial radio station specifically for this
+        purpose. It was an important forerunner of pirate radio and modern
+        commercial radio in the United Kingdom. The onset of World War II
+        silenced all but one of the original IBC stations, with only Radio
+        Luxembourg continuing its nightly transmissions to Britain.
+      </p>
+    </article>
+  </body>
+</html>
