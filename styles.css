@@ -90,15 +90,32 @@ webui-tabs {
     border-right: 0;
   }
 
+
+
   /* better solutions to this ? */
-  [aria-selected="true"] + [data-tab]:last-child,
-  [data-tab] + [aria-selected="true"]:last-child {
-    border-left: 1px solid var(--very-light-grey);
+  [aria-selected="true"] + [data-tab]:last-child {
+    border-left: 0;
+    border-right: 0;
+  }
+
+  [aria-selected="true"]:has(+ [aria-selected="false"]:last-child) {
+    border-left: 0;
+    border-right: 1px solid transparent;
   }
 
   [data-tab]:has(+ [aria-selected="true"]:last-child) {
-    padding-left: 34px; /*prevent text shift due to border changes*/
+    border-left: 0;
+    borer-right: 0;
   }
+
+  [data-tab]:last-child {
+    border-right: 0;
+  }
+
+  [aria-selected="true"]:last-child {
+    border-left: 0;
+  }
+
 
   [data-tab]:focus-visible {
     z-index: 2;
