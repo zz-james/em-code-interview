@@ -105,7 +105,7 @@ webui-tabs {
 
   [data-tab]:has(+ [aria-selected="true"]:last-child) {
     border-left: 0;
-    borer-right: 0;
+    border-right: 1px solid transparent;
   }
 
   [data-tab]:last-child {
