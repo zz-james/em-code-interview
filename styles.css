@@ -90,32 +90,26 @@ webui-tabs {
     border-right: 0;
   }
 
-
-
   /* better solutions to this ? */
-  [aria-selected="true"] + [data-tab]:last-child {
-    border-left: 0;
-    border-right: 0;
+  [data-tab] {
+    border-left: 1px solid var(--off-white);
+    border-right: 0px;
   }
 
-  [aria-selected="true"]:has(+ [aria-selected="false"]:last-child) {
-    border-left: 0;
+  [aria-selected="true"] {
+    border-left: 1px solid transparent;
     border-right: 1px solid transparent;
   }
 
-  [data-tab]:has(+ [aria-selected="true"]:last-child) {
+  [aria-selected="true"] + [data-tab] {
     border-left: 0;
-    border-right: 1px solid transparent;
-  }
-
-  [data-tab]:last-child {
     border-right: 0;
   }
 
   [aria-selected="true"]:last-child {
-    border-left: 0;
+    border-left: 1px solid transparent;
+    border-right: 0;
   }
-
 
   [data-tab]:focus-visible {
     z-index: 2;
@@ -126,7 +120,6 @@ webui-tabs {
     background-color: var(--default-background-color);
     box-shadow: 0px 3px 0px 0px var(--active-section-indicator) inset;
     border-top: 1px solid var(--active-section-indicator);
-    border-right: 0;
     margin: 0;
   }
 
